@@ -45,7 +45,7 @@ facilitant leur orchestration.
 #### 1. **Cloner le dépôt**
 
    ```bash
-   git clone https://github.com/votre-utilisateur/microservices-project.git
+   git clone https://github.com/nicolasvauche/microservices-project.git
    cd microservices-project
    ```
 
