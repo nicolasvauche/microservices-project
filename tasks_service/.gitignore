@@ -1,0 +1,45 @@
+# Environnements Python
+env/
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Fichiers spécifiques à Django
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.env
+
+# Fichiers générés par des migrations
+tasks/migrations/
+
+# Configurations IDE
+.vscode/
+.idea/
+*.iml
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Conteneurs Docker (optionnel)
+*.pid
+docker-compose.override.yml
+
+# Dépendances Node.js (pour les autres microservices, si applicable)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Dépendances Composer (pour Symfony, si applicable)
+vendor/
+.env.local
+.env.*.local
+
+# Fichiers d'installation des dépendances
+Pipfile
+Pipfile.lock

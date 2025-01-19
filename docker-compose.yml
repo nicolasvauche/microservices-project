@@ -1,0 +1,43 @@
+services:
+  tasks_service:
+    build:
+      context: ./tasks_service
+    container_name: tasks-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./tasks_service:/app
+    networks:
+      - microservices_network
+
+  users_service:
+    build:
+      context: ./users_service
+    container_name: users-service
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./users_service:/app:cached
+      - /app/node_modules
+      - ./users_service/data:/data
+    networks:
+      - microservices_network
+    environment:
+      - NODE_ENV=development
+      - DB_FILE=/data/users.db
+
+  reminders_service:
+    build:
+      context: ./reminders_service
+    container_name: reminders-service
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./reminders_service:/app
+      - ./reminders_service/var:/app/var
+    networks:
+      - microservices_network
+
+networks:
+  microservices_network:
+    driver: bridge

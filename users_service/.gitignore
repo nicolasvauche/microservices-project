@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+node_modules
+data/users.db
+data/users_test.db
+.env
