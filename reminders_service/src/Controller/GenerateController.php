@@ -23,7 +23,7 @@ final class GenerateController extends AbstractController
      * @throws TransportExceptionInterface
      * @throws ServerExceptionInterface
      */
-    #[Route('/api/generate-reminders', name: 'app_reminders/generate')]
+    #[Route('/api/remindersgenerate', name: 'app_reminders_generate')]
     public function index(GenerateService $generateService): Response
     {
         return $this->json([
