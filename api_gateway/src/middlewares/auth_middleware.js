@@ -84,14 +84,14 @@ const verifyTokenPresence = async (req, res, next) => {
 }
 
 const validateToken = async token => {
-  const response = await axios.get('http://localhost:3000/api/users/me', {
+  const response = await axios.get('http://users-service:3000/api/users/me', {
     headers: { Authorization: `Bearer ${token}` }
   })
   return response.data
 }
 
 const getUserIdFromToken = async token => {
-  const response = await axios.get('http://localhost:3000/api/users/me', {
+  const response = await axios.get('http://users-service:3000/api/users/me', {
     headers: { Authorization: `Bearer ${token}` }
   })
   return response.data.id
@@ -100,7 +100,7 @@ const getUserIdFromToken = async token => {
 const getTaskOwnerId = async taskId => {
   try {
     const response = await axios.get(
-      `http://localhost:8000/api/tasks/${taskId}`
+      `http://tasks-service:8000/api/tasks/${taskId}`
     )
     return response.data.user_id
   } catch (error) {

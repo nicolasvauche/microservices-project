@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 1rem;
+  background-color: #222222;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav a.active {
+  color: #ff0000;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
+
+li.done,
+li.done strong {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.task {
+  margin-bottom: 0.25rem;
+}
+
+.details {
+  margin-left: 2rem;
+}
+
+li strong {
+  margin-bottom: 0.25rem;
+}
+
+.edit {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.delete {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: red;
+}
+
+.mark-done {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: green;
+}
+
+.mark-undone {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: orange;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+  width: auto;
+}
+
+button {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  background-color: #222222;
+  border: none;
+  cursor: pointer;
+}

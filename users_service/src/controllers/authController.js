@@ -47,7 +47,7 @@ exports.login = async (req, res) => {
       }
     )
 
-    res.json({token})
+    res.json({ id: user.id, name: user.name, token })
   } catch (error) {
     res.status(500).json({ message: 'Internal server error', error })
   }

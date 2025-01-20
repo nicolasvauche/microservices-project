@@ -38,6 +38,30 @@ services:
     networks:
       - microservices_network
 
+  gateway:
+    build:
+      context: ./api_gateway
+    container_name: gateway
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./api_gateway:/app:cached
+      - /app/node_modules
+    networks:
+      - microservices_network
+
+  frontend:
+    build:
+      context: ./microservices_frontend
+    container_name: frontend
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./microservices_frontend:/app:cached
+      - /app/node_modules
+    networks:
+      - microservices_network
+
 networks:
   microservices_network:
     driver: bridge

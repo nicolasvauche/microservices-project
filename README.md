@@ -1,8 +1,8 @@
 # Microservices Project
 
 Ce projet est une architecture de microservices permettant la gestion des tâches, des utilisateurs, et des rappels. Il
-est composé de trois services distincts, chacun dédié à une responsabilité spécifique, et d'un fichier `docker-compose`
-facilitant leur orchestration.
+est composé de trois services distincts, chacun dédié à une responsabilité spécifique, une API passerelle, un frontend,
+et d'un fichier `docker-compose` facilitant leur orchestration.
 
 ---
 
@@ -28,6 +28,20 @@ facilitant leur orchestration.
 - **Rôle** : Gestion des rappels automatisés.
 - **Port** : `8001`
 - **Documentation** : Consultez le [README de Reminders Service](./reminders_service/README.md).
+
+### 4. **API Gateway**
+
+- **Langage** : JavaScript (Node.js)
+- **Rôle** : Centralisation des appels et redirection vers les Services.
+- **Port** : `3001`
+- **Documentation** : Consultez le [README de l'API Gateway](./api_gateway/README.md).
+
+### 5. **Frontend**
+
+- **Langage** : JavaScript (Next.js)
+- **Rôle** : Interface utilisateur.
+- **Port** : `3002`
+- **Documentation** : Consultez le [README de l'API Gateway](./microservices_frontend/README.md).
 
 ---
 
@@ -55,20 +69,20 @@ facilitant leur orchestration.
    docker-compose up -d --build
    ```
 
-#### 3. **Vérifier les services**
+#### 3. **Tester les services avec le Frotnend intégré**
 
-- **Tasks Service :** http://localhost:8000
-- **Users Service :** http://localhost:3000
-- **Reminders Service :** http://localhost:8001
+- **Frontend :** http://localhost:3002
 
 #### 4. **Structure des répertoires**
 
    ```plaintext
    /microservices-project
    ├── docker-compose.yaml
+   ├── api_gateway/
+   ├── frontend/
+   ├── reminders_service/
    ├── tasks_service/
-   ├── users_service/
-   └── reminders_service/
+   └── users_service/
    ```
 
 #### 5. **Tests**
